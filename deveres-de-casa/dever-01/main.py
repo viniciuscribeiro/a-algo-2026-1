@@ -1,40 +1,49 @@
+"""
+Módulo para comparação empírica de algoritmos de ordenação.
+
+Este script atende ao dever 01, comparando o tempo de execução do 
+algoritmo Insertion Sort O(n^2) com a função nativa sorted() O(n log n).
+"""
+
 import time
 import random
 
+TAMANHOS_TESTE = [1000, 5000, 10000, 20000, 50000]
+
 def insertion_sort(arr):
     """
-    Implementação do Insertion Sort - Complexidade O(n^2).
+    Ordena uma lista in-place utilizando o algoritmo Insertion Sort.
+
+    Complexidade de tempo: O(n^2).
     """
     for i in range(1, len(arr)):
         chave = arr[i]
         j = i - 1
         
-        # Move os elementos que são maiores que a 'chave' uma posição à frente
         while j >= 0 and arr[j] > chave:
             arr[j + 1] = arr[j]
             j -= 1
         arr[j + 1] = chave
 
 def executar_dever():
-    tamanhos = [1000, 5000, 10000, 20000, 50000]
-    
+    """
+    Executa os testes de desempenho e exibe os resultados no terminal.
+    """
     print("==================================================")
     print(" DEVER DE CASA - A BARREIRA DO n^2")
     print("==================================================\n")
     
-    for n in tamanhos:
+    for n in TAMANHOS_TESTE:
         print(f"--- Testando para n = {n} ---")
         
         lista_original = [random.randint(0, 100000) for _ in range(n)]
         
-        # Avaliação do Insertion Sort O(n^2)
         lista_insertion = lista_original.copy()
         inicio_insertion = time.time()
         insertion_sort(lista_insertion)
         fim_insertion = time.time()
         tempo_insertion = fim_insertion - inicio_insertion
         
-        # Avaliação da função nativa sorted() O(n log n)
         lista_timsort = lista_original.copy()
         inicio_timsort = time.time()
         _ = sorted(lista_timsort)
