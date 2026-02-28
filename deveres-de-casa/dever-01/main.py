@@ -16,7 +16,6 @@ def insertion_sort(arr):
         arr[j + 1] = chave
 
 def executar_dever():
-    # Tamanhos exigidos no exercício
     tamanhos = [1000, 5000, 10000, 20000, 50000]
     
     print("==================================================")
@@ -26,24 +25,22 @@ def executar_dever():
     for n in tamanhos:
         print(f"--- Testando para n = {n} ---")
         
-        # Gera uma lista de tamanho 'n' com números inteiros aleatórios
         lista_original = [random.randint(0, 100000) for _ in range(n)]
         
-        # 1. Avaliação do Insertion Sort O(n^2)
+        # Avaliação do Insertion Sort O(n^2)
         lista_insertion = lista_original.copy()
         inicio_insertion = time.time()
         insertion_sort(lista_insertion)
         fim_insertion = time.time()
         tempo_insertion = fim_insertion - inicio_insertion
         
-        # 2. Avaliação da função nativa sorted() O(n log n)
+        # Avaliação da função nativa sorted() O(n log n)
         lista_timsort = lista_original.copy()
         inicio_timsort = time.time()
         _ = sorted(lista_timsort)
         fim_timsort = time.time()
         tempo_timsort = fim_timsort - inicio_timsort
         
-        # Saída no terminal
         print(f"Tempo Insertion Sort O(n^2) : {tempo_insertion:.6f} segundos")
         print(f"Tempo sorted() O(n log n)   : {tempo_timsort:.6f} segundos")
         print("-" * 50)
