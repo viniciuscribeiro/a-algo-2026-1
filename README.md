@@ -15,7 +15,7 @@ Todas as atividades estão organizadas dentro do diretório `deveres-de-casa`, s
 a-algo-2026-1/
 └── deveres-de-casa/
     ├── dever-01/          # A Barreira do n² (Comparação empírica de ordenação)
-    └── ...                # Futuros deveres serão adicionados aqui
+    └── dever-02/          # Fatorial Recursivo (Cálculo e análise de complexidade O(n))
 
 ```
 
