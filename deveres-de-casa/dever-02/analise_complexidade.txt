@@ -1,0 +1,49 @@
+================================================================================
+                          ANÁLISE DE COMPLEXIDADE
+================================================================================
+Aluno: Vinicius Cordeiro Ribeiro
+Curso: Ciência da Computação - IESB
+Repositório: a-algo-2026-1
+Pasta: deveres-de-casa/dever-02
+================================================================================
+
+1. RESULTADOS DA MEDIÇÃO DE TEMPO
+--------------------------------------------------------------------------------
+Os testes foram executados para medir o tempo do cálculo do fatorial de forma 
+recursiva, conforme os tamanhos de entrada (n) exigidos:
+
+- Para n = 10  : 0.00000310 segundos
+- Para n = 100 : 0.00002310 segundos
+- Para n = 500 : 0.00017470 segundos
+- Para n = 1000: 0.00047070 segundos
+
+
+2. ANÁLISE DE COMPLEXIDADE ASSINTÓTICA
+--------------------------------------------------------------------------------
+Com base no comportamento do algoritmo e nos tempos de execução observados, a 
+complexidade assintótica foi determinada da seguinte forma:
+
+>> Complexidade de Tempo: O(n) (Tempo Linear)
+Explicação e Raciocínio:
+O algoritmo resolve o fatorial chamando a própria função de forma recursiva e 
+subtraindo 1 da entrada a cada chamada, até atingir o caso base (n = 1 ou n = 0). 
+Isso significa que, para calcular o fatorial de "n", a função executará exatamente 
+"n" chamadas recursivas. 
+
+Dentro de cada chamada, o algoritmo executa apenas operações primitivas de tempo 
+constante O(1), que são:
+- Uma verificação condicional (if n == 0 or n == 1).
+- Uma operação matemática de multiplicação.
+
+Como temos operações O(1) repetidas "n" vezes, o tempo de execução cresce 
+de forma linear, proporcionalmente ao aumento da entrada n. Portanto, a 
+complexidade de tempo final é O(n).
+
+
+>> Complexidade de Espaço: O(n)
+Explicação e Raciocínio:
+Em algoritmos recursivos, cada chamada de função ocupa um espaço na pilha de 
+execução (Call Stack) da memória. Como o algoritmo precisa empilhar "n" chamadas 
+simultâneas antes de atingir o caso base e começar a retornar (desempilhar) os 
+valores, a memória consumida também cresce de forma linear. Logo, a complexidade 
+espacial é O(n).
