@@ -16,6 +16,7 @@ a-algo-2026-1/
 └── deveres-de-casa/
     ├── dever-01/          # A Barreira do n² (Comparação empírica de ordenação)
     └── dever-02/          # Fatorial Recursivo (Cálculo e análise de complexidade O(n))
+    └── dever-03/          # Palíndromo Recursivo (Verificação de array por recursão)
 
 ```
 
