@@ -18,6 +18,7 @@ a-algo-2026-1/
     └── dever-02/          # Fatorial Recursivo (Cálculo e análise de complexidade O(n))
     └── dever-03/          # Palíndromo Recursivo (Verificação de array por recursão)
     └── dever-04/          # Equação de Recorrência (Recursão e fórmula fechada O(2^n))
+    └── dever-05/          # Cálculo de Complexidade (Teorema Mestre, Merge Sort e Matrizes)
 
 ```
 
